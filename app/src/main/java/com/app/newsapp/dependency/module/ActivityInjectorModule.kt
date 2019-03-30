@@ -4,9 +4,9 @@ import com.app.newsapp.view.activities.MainActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
-
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
  */
 
 @Module

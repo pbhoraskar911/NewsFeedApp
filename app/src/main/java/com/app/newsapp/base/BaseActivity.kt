@@ -8,8 +8,10 @@ import dagger.android.support.DaggerAppCompatActivity
 
 
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
  */
+
 abstract class BaseActivity : DaggerAppCompatActivity() {
     @LayoutRes
     abstract fun layoutRes(): Int

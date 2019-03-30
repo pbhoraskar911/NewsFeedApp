@@ -2,10 +2,7 @@ package com.app.newsapp.dependency.component
 
 import android.app.Application
 import com.app.newsapp.NewsFeedApplication
-import com.app.newsapp.dependency.module.ActivityInjectorModule
-import com.app.newsapp.dependency.module.AppModule
-import com.app.newsapp.dependency.module.FragmentInjectorModule
-import com.app.newsapp.dependency.module.NetworkModule
+import com.app.newsapp.dependency.module.*
 import dagger.Component
 import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton
@@ -20,10 +17,11 @@ import javax.inject.Singleton
  */
 @Singleton
 @Component(
-    modules = arrayOf(
-        AppModule::class, NetworkModule::class, AndroidInjectionModule::class, ActivityInjectorModule::class,
-        FragmentInjectorModule::class
-    )
+        modules = arrayOf(
+                AppModule::class, NetworkModule::class, AndroidInjectionModule::class,
+                ActivityInjectorModule::class, FragmentInjectorModule::class,
+                ViewModelModule::class, ViewModelFactoryModule::class
+        )
 )
 interface AppComponent {
 

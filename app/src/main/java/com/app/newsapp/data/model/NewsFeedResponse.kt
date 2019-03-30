@@ -5,9 +5,9 @@ import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
-
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
  */
 @Parcelize
 data class NewsFeedResponse(

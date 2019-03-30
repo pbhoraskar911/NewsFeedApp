@@ -5,8 +5,9 @@
     <dimen name="dimens_padding_16dp">16dp</dimen>
     <dimen name="dimens_text_size_24sp">24sp</dimen>
     <dimen name="dimens_padding_6dp">6dp</dimen>
-    <dimen name="dimens_text_size_20sp">20sp</dimen>
+    <dimen name="dimens_text_size_16sp">16sp</dimen>
     <dimen name="dimens_text_size_36sp">36sp</dimen>
     <dimen name="dimens_text_size_18sp">18sp</dimen>
     <dimen name="dimens_padding_24dp">24dp</dimen>
+    <dimen name="dimens_margin_16dp">16dp</dimen>
 </resources>

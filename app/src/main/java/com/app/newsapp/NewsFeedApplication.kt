@@ -14,9 +14,11 @@ import dagger.android.support.HasSupportFragmentInjector
 import timber.log.Timber
 import javax.inject.Inject
 
-
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
+ * Global Application class for NewsFeedApplication
+ *
  */
 class NewsFeedApplication : Application(), HasActivityInjector, HasSupportFragmentInjector {
 
@@ -42,9 +44,9 @@ class NewsFeedApplication : Application(), HasActivityInjector, HasSupportFragme
         }
 
         component = DaggerAppComponent.builder()
-            .appModule(AppModule(this))
-            .networkModule(NetworkModule(BuildConfig.API_BASE_URL))
-            .build()
+                .appModule(AppModule(this))
+                .networkModule(NetworkModule(BuildConfig.API_BASE_URL))
+                .build()
         return component.injectApplication(this)
     }
 }

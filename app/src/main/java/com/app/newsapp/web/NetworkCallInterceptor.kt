@@ -16,7 +16,7 @@ class NetworkCallInterceptor : Interceptor {
 
         val url =
             request.url().newBuilder()
-                .addQueryParameter("key", BuildConfig.API_KEY)
+                .addQueryParameter("apiKey", BuildConfig.API_KEY)
                 .build()
 
         request = request.newBuilder().url(url).build()

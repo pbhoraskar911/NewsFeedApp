@@ -16,6 +16,8 @@ import com.app.newsapp.view.adapter.NewsFeedAdapter
 
 /**
  * @author Pranav Bhoraskar
+ *
+ * Fragment displays news feed data when api response is a success
  */
 
 class NewsFeedFragment : BaseFragment() {
@@ -23,11 +25,14 @@ class NewsFeedFragment : BaseFragment() {
     @BindView(R.id.news_recycler_view)
     lateinit var newsRecyclerView: RecyclerView
 
+    var newsFeedResponse : NewsFeedResponse?=null
+
     override fun layoutRes(): Int = R.layout.fragment_news_feed
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        setUpRecyclerView( )
+        newsFeedResponse = arguments?.getParcelable(getString(R.string.string_news_feed))
+        setUpRecyclerView(newsFeedResponse)
     }
 
     private lateinit var adapter: NewsFeedAdapter
