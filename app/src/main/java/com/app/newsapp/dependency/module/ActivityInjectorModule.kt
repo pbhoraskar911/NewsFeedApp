@@ -1,6 +1,7 @@
 package com.app.newsapp.dependency.module
 
 import com.app.newsapp.view.activities.MainActivity
+import com.app.newsapp.view.activities.WebViewActivity
 import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
@@ -14,4 +15,7 @@ abstract class ActivityInjectorModule {
 
     @ContributesAndroidInjector(modules = arrayOf(FragmentInjectorModule::class))
     internal abstract fun injectMainActivity(): MainActivity
+
+    @ContributesAndroidInjector
+    internal abstract fun injectWebViewActivity(): WebViewActivity
 }

@@ -14,4 +14,6 @@
 
     <string name="string_news_feed">news_feed</string>
     <string name="string_hint_timestamp">110 hrs ago</string>
+    <string name="news_url">news_url</string>
+    <string name="no_page_found">Page Not Found!!</string>
 </resources>
