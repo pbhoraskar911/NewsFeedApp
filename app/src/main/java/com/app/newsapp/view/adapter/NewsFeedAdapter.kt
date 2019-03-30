@@ -11,6 +11,7 @@ import butterknife.BindView
 import butterknife.ButterKnife
 import com.app.newsapp.R
 import com.app.newsapp.data.model.Articles
+import com.app.newsapp.utils.convertDate
 import com.squareup.picasso.Picasso
 
 
@@ -45,6 +46,8 @@ class NewsFeedAdapter(
         lateinit var newsHeadline: TextView
         @BindView(R.id.news_description)
         lateinit var newsDescription: TextView
+        @BindView(R.id.news_timestamp)
+        lateinit var newsTimestamp: TextView
 
         init {
             ButterKnife.bind(this, itemView)
@@ -54,6 +57,11 @@ class NewsFeedAdapter(
             setNewsTitle(article)
             setNewsDescription(article)
             setNewsImage(article)
+            setNewsTimestamp(article)
+        }
+
+        private fun setNewsTimestamp(article: Articles) {
+            newsTimestamp.text = article.publishedAt!!.convertDate()
         }
 
         private fun setNewsImage(article: Articles) {

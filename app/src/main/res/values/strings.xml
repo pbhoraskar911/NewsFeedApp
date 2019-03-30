@@ -13,4 +13,5 @@
     <string name="no_internet">Please enable Wi-Fi or mobile data for internet connectivity.</string>
 
     <string name="string_news_feed">news_feed</string>
+    <string name="string_hint_timestamp">110 hrs ago</string>
 </resources>

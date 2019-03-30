@@ -52,14 +52,16 @@
         <TextView
                 android:id="@+id/news_headline"
                 style="@style/RowTextStyle"
+                android:maxLines="2"
                 android:fontFamily="@font/montserrat_medium"
-                android:textSize="@dimen/dimens_text_size_24sp"
+                android:textSize="@dimen/dimens_text_size_20sp"
                 app:layout_constraintEnd_toEndOf="@id/vl_guideline2"
                 app:layout_constraintStart_toStartOf="@id/vl_guideline1"
                 app:layout_constraintTop_toBottomOf="@id/image_news"
                 tools:text="@string/string_hint_headline"/>
 
         <TextView
+                android:maxLines="2"
                 android:id="@+id/news_description"
                 style="@style/RowTextStyle"
                 android:fontFamily="@font/montserrat_regular"
@@ -68,8 +70,20 @@
                 app:layout_constraintEnd_toEndOf="@id/vl_guideline2"
                 app:layout_constraintStart_toStartOf="@id/vl_guideline1"
                 app:layout_constraintTop_toBottomOf="@id/news_headline"
-                app:layout_constraintBottom_toTopOf="@id/hl_guideline2"
                 tools:text="@string/string_hint_description"/>
+
+        <TextView
+                android:id="@+id/news_timestamp"
+                style="@style/RowTextStyle"
+                android:maxLines="1"
+                android:fontFamily="@font/montserrat_regular"
+                android:textSize="@dimen/dimens_text_size_14sp"
+                android:layout_marginBottom="@dimen/dimens_margin_10dp"
+                app:layout_constraintEnd_toEndOf="@id/vl_guideline2"
+                app:layout_constraintStart_toStartOf="@id/vl_guideline1"
+                app:layout_constraintTop_toBottomOf="@id/news_description"
+                app:layout_constraintBottom_toTopOf="@id/hl_guideline2"
+                tools:text="@string/string_hint_timestamp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
