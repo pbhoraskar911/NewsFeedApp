@@ -1,2 +1,18 @@
 # NewsFeedApp
-App to fetch news feed from India
+
+Android App to fetch News Feed from India powered by <a href="https://newsapi.org/"><b>NewsAPI.org</b></a>
+
+
+### Architecture and Libraries used
+------------------------------------
+
+* Kotlin
+* [Android Architecture Components](https://developer.android.com/topic/libraries/architecture/) - MVVM design pattern + [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel.html) + [LiveData](https://developer.android.com/topic/libraries/architecture/livedata.html)
+* Dependency Injection ([Dagger2](http://google.github.io/dagger/)) to separate configuration (properties, imageClient, httpClient, etc.) and UI usage
+* [RxJava & RxAndroid](https://github.com/ReactiveX/RxAndroid) as Retrofit2 call adapter - NetworkInterceptor, OkHttpClient
+* [Timber](https://github.com/JakeWharton/timber) for logging
+
+### Developed By
+------------------------------------
+
+* Pranav Bhoraskar
