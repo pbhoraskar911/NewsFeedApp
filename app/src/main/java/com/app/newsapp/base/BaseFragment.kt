@@ -14,8 +14,10 @@ import dagger.android.support.DaggerFragment
 
 
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
  */
+
 abstract class BaseFragment : DaggerFragment() {
 
     private var activity: AppCompatActivity? = null

@@ -7,7 +7,8 @@ import dagger.android.ContributesAndroidInjector
 
 
 /**
- * Created by Pranav Bhoraskar
+ * @author Pranav Bhoraskar
+ *
  */
 
 @Module

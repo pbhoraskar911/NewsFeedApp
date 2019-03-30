@@ -1,7 +1,19 @@
 <resources>
     <string name="app_name">NewsApp</string>
+
     <string name="string_top_headlines">Top Headlines</string>
     <string name="string_hint_headline">HeadLine 1</string>
+    <string name="string_hint_description">This is the description of the news</string>
+
     <string name="string_text_error">Unable to reach server!!</string>
+
     <string name="string_retry">Retry</string>
+    <string name="string_close">Close</string>
+    <string name="network_error">No Network Connection!!</string>
+    <string name="no_internet">Please enable Wi-Fi or mobile data for internet connectivity.</string>
+
+    <string name="string_news_feed">news_feed</string>
+    <string name="string_hint_timestamp">110 hrs ago</string>
+    <string name="news_url">news_url</string>
+    <string name="no_page_found">Page Not Found!!</string>
 </resources>
