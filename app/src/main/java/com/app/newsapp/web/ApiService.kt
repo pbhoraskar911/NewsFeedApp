@@ -1,5 +1,11 @@
 package com.app.newsapp.web
 
+import com.app.newsapp.data.model.NewsFeedResponse
+import io.reactivex.Observable
+import org.jetbrains.annotations.NotNull
+import retrofit2.http.GET
+import retrofit2.http.QueryMap
+
 
 /**
  * @author Pranav Bhoraskar
@@ -8,4 +14,9 @@ package com.app.newsapp.web
  */
 
 interface ApiService {
+
+    @GET("top-headlines")
+    fun fetchNewsFeed(
+        @QueryMap hashMap: @NotNull HashMap<String, String>
+    ): @NotNull Observable<NewsFeedResponse>
 }
