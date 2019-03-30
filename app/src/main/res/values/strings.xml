@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <string name="string_top_headlines">Top Headlines</string>
+    <string name="string_hint_headline">HeadLine 1</string>
+    <string name="string_text_error">Unable to reach server!!</string>
+    <string name="string_retry">Retry</string>
 </resources>

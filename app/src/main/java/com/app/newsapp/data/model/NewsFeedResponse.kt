@@ -12,14 +12,14 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class NewsFeedResponse(
 
-    @SerializedName("status")
-    @Expose
-    private var status: String? = null,
-    @SerializedName("totalResults")
-    @Expose
-    private var totalResults: Int? = null,
-    @SerializedName("articles")
-    @Expose
-    private var articles: List<Articles>? = null
+        @SerializedName("status")
+        @Expose
+        var status: String? = null,
+        @SerializedName("totalResults")
+        @Expose
+        var totalResults: Int? = null,
+        @SerializedName("articles")
+        @Expose
+        var articles: List<Articles>? = null
 
 ) : Parcelable
