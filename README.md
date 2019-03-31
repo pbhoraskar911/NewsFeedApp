@@ -16,11 +16,12 @@ Android App to fetch News Feed from India powered by <a href="https://newsapi.or
 
 ### Screenshots
 ------------------------------------
-
- ![Screenshot1 - Launcher](/screenshots/NewsFeed4.png)
- ![Screenshot2](/screenshots/NewsFeed1.png)
- ![Screenshot3](/screenshots/NewsFeed2.png)
- ![Screenshot4](/screenshots/NewsFeed3.png)
+<p align="left">
+ <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed4.png" />
+ <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed1.png" />
+ <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed2.png" />
+ <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed3.png" />
+ </p><br>
 
 ### Developed By
 ------------------------------------
