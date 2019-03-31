@@ -40,23 +40,10 @@ class MainViewModel @Inject constructor(
     fun fetchNewsFeed() {
         getDisposableObserever()
 
-        newsFeedRepository.fetchNewsFeed(getQueryParameters(), getLimitParameters())
+        newsFeedRepository.fetchNewsFeed()
             .subscribeOn(subscribeOnScheduler)
             .observeOn(observeOnScheduler)
             .subscribe(disposableObserver)
-    }
-
-    private fun getLimitParameters(): HashMap<String, Int> {
-        val queryMap = HashMap<String, Int>()
-        queryMap.put("pageSize", 100)
-        return queryMap
-    }
-
-    private fun getQueryParameters(): HashMap<String, String> {
-        val queryMap = HashMap<String, String>()
-        queryMap.put("country", "in")
-        queryMap.put("category", "general")
-        return queryMap
     }
 
     /**

@@ -18,7 +18,13 @@ class NetworkCallInterceptor : Interceptor {
         val context = NewsFeedApplication.component.getApplicationContext()
         var request = chain.request()
 
-        val url = request.url().newBuilder().addQueryParameter("apiKey", BuildConfig.API_KEY).build()
+        val url = request.url().newBuilder()
+            .addQueryParameter("apiKey", BuildConfig.API_KEY)
+            .addQueryParameter("country", "in")
+            .addQueryParameter("category", "general")
+            .addQueryParameter("pageSize", "100")
+            .build()
+        request = request.newBuilder().url(url).build()
 
         request = if (context.isConnectedToInternet())
             request.newBuilder().header("Cache-Control", "public, max-age=" + 30).build()
@@ -28,7 +34,6 @@ class NetworkCallInterceptor : Interceptor {
                 "public, only-if-cached, max-stale=" + 60 * 60 * 24 * 7
             ).build()
 
-        request = request.newBuilder().url(url).build()
 
         return chain.proceed(request)
     }

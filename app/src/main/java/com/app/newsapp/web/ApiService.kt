@@ -4,7 +4,6 @@ import com.app.newsapp.data.model.NewsFeedResponse
 import io.reactivex.Observable
 import org.jetbrains.annotations.NotNull
 import retrofit2.http.GET
-import retrofit2.http.QueryMap
 
 
 /**
@@ -16,8 +15,5 @@ import retrofit2.http.QueryMap
 interface ApiService {
 
     @GET("top-headlines")
-    fun fetchNewsFeed(
-        @QueryMap hashMap: @NotNull HashMap<String, String>,
-        @QueryMap hashMapPagination: @NotNull HashMap<String, Int>
-    ): @NotNull Observable<NewsFeedResponse>
+    fun fetchNewsFeed(): @NotNull Observable<NewsFeedResponse>
 }

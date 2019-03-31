@@ -12,6 +12,14 @@ Android App to fetch News Feed from India powered by <a href="https://newsapi.or
 * [RxJava & RxAndroid](https://github.com/ReactiveX/RxAndroid) as Retrofit2 call adapter - NetworkInterceptor, OkHttpClient
 * [Timber](https://github.com/JakeWharton/timber) for logging
 
+### Screenshots
+------------------------------------
+
+ ![Screenshot1 - Launcher](/screenshots/NewsFeed4.png)
+ ![Screenshot2](/screenshots/NewsFeed1.png)
+ ![Screenshot3](/screenshots/NewsFeed2.png)
+ ![Screenshot4](/screenshots/NewsFeed3.png)
+
 ### Developed By
 ------------------------------------
 

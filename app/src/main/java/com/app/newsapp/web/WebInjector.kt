@@ -51,8 +51,8 @@ object WebInjector {
 
         val builder = OkHttpClient.Builder()
         builder
-            .cache(cache)
             .addInterceptor(NetworkCallInterceptor())
+            .cache(cache)
             .connectTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
             .followRedirects(true)

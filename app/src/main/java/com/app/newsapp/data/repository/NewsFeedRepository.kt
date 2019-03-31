@@ -12,10 +12,7 @@ import javax.inject.Inject
  * Repository Class - acts as a bridge between data/api calls and rest of the app
  */
 class NewsFeedRepository @Inject constructor(private val apiService: ApiService) {
-    fun fetchNewsFeed(
-        queryParameters: HashMap<String, String>,
-        paginationParameters: HashMap<String, Int>
-    ): Observable<NewsFeedResponse> {
-        return apiService.fetchNewsFeed(queryParameters, paginationParameters)
+    fun fetchNewsFeed(): Observable<NewsFeedResponse> {
+        return apiService.fetchNewsFeed()
     }
 }
