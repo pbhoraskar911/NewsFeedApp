@@ -14,7 +14,8 @@ import com.app.newsapp.R
 import com.app.newsapp.data.model.Articles
 import com.app.newsapp.utils.convertDate
 import com.app.newsapp.view.activities.WebViewActivity
-import com.squareup.picasso.Picasso
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 
 
 /**
@@ -75,9 +76,10 @@ class NewsFeedAdapter(
         }
 
         private fun setNewsImage(article: Articles) {
-            Picasso.get()
+            Glide.with(context!!)
                 .load(article.urlToImage)
-                .fit()
+                .centerCrop()
+                .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
                 .into(newsImage)
         }
 
