@@ -21,9 +21,9 @@ import javax.inject.Named
  *
  */
 class MainViewModel @Inject constructor(
-        private var newsFeedRepository: NewsFeedRepository,
-        @Named(SCHEDULER_IO) private val subscribeOnScheduler: Scheduler,
-        @Named(SCHEDULER_MAIN_THREAD) private val observeOnScheduler: Scheduler
+    private var newsFeedRepository: NewsFeedRepository,
+    @Named(SCHEDULER_IO) private val subscribeOnScheduler: Scheduler,
+    @Named(SCHEDULER_MAIN_THREAD) private val observeOnScheduler: Scheduler
 ) : ViewModel() {
 
     lateinit var disposableObserver: DisposableObserver<NewsFeedResponse>
@@ -40,10 +40,16 @@ class MainViewModel @Inject constructor(
     fun fetchNewsFeed() {
         getDisposableObserever()
 
-        newsFeedRepository.fetchNewsFeed(getQueryParameters())
-                .subscribeOn(subscribeOnScheduler)
-                .observeOn(observeOnScheduler)
-                .subscribe(disposableObserver)
+        newsFeedRepository.fetchNewsFeed(getQueryParameters(), getLimitParameters())
+            .subscribeOn(subscribeOnScheduler)
+            .observeOn(observeOnScheduler)
+            .subscribe(disposableObserver)
+    }
+
+    private fun getLimitParameters(): HashMap<String, Int> {
+        val queryMap = HashMap<String, Int>()
+        queryMap.put("pageSize", 100)
+        return queryMap
     }
 
     private fun getQueryParameters(): HashMap<String, String> {

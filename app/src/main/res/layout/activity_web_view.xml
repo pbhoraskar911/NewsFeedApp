@@ -20,6 +20,21 @@
     />
 
     <TextView
+            android:id="@+id/text_news_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_loading_news"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/dimens_margin_24dp"
+            app:layout_constraintTop_toBottomOf="@id/progress_bar_webview"
+            android:textColor="@color/textColorDark"
+            android:textSize="@dimen/dimens_text_size_16sp"
+            android:gravity="center"
+            android:fontFamily="@font/montserrat_regular"
+    />
+
+    <TextView
             android:id="@+id/no_web_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

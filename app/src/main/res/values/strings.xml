@@ -16,4 +16,8 @@
     <string name="string_hint_timestamp">110 hrs ago</string>
     <string name="news_url">news_url</string>
     <string name="no_page_found">Page Not Found!!</string>
+    <string name="string_app_name">News App</string>
+    <string name="string_fetching_news_feed">Fetching Top Headlines just for you..</string>
+    <string name="string_loading_news">Loading you news..</string>
+    <string name="string_hint_news_source">News Source</string>
 </resources>

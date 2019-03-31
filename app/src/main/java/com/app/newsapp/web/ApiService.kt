@@ -17,6 +17,7 @@ interface ApiService {
 
     @GET("top-headlines")
     fun fetchNewsFeed(
-        @QueryMap hashMap: @NotNull HashMap<String, String>
+        @QueryMap hashMap: @NotNull HashMap<String, String>,
+        @QueryMap hashMapPagination: @NotNull HashMap<String, Int>
     ): @NotNull Observable<NewsFeedResponse>
 }
