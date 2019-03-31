@@ -22,7 +22,7 @@ android {
             proguardFile 'proguard-dependency-rules.pro'
         }
         debug {
-            minifyEnabled false
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt')
             proguardFile 'proguard-dependency-rules.pro'
         }
