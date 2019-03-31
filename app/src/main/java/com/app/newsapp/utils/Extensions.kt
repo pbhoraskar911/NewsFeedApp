@@ -32,6 +32,6 @@ fun Context.isConnectedToInternet(): Boolean {
 fun String.convertDate(): String {
     val sdf = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.getDefault())
     val currentdate = sdf.parse(this)
-    val sdf2 = SimpleDateFormat("MMM dd,yyyy - HH:mm aaa", Locale.getDefault())
+    val sdf2 = SimpleDateFormat("MMM dd - hh:mm aaa", Locale.getDefault())
     return sdf2.format(currentdate)
 }

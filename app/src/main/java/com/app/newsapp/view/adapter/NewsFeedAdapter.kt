@@ -59,6 +59,8 @@ class NewsFeedAdapter(
         lateinit var newsDescription: TextView
         @BindView(R.id.news_timestamp)
         lateinit var newsTimestamp: TextView
+        @BindView(R.id.news_source)
+        lateinit var newsSource: TextView
 
         init {
             ButterKnife.bind(this, itemView)
@@ -69,6 +71,11 @@ class NewsFeedAdapter(
             setNewsDescription(article)
             setNewsImage(article)
             setNewsTimestamp(article)
+            setNewsSource(article)
+        }
+
+        private fun setNewsSource(article: Articles) {
+            newsSource.text = article.source!!.name
         }
 
         private fun setNewsTimestamp(article: Articles) {

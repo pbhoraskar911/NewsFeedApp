@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
@@ -30,6 +31,8 @@ class MainActivity : BaseActivity() {
 
     @BindView(R.id.progress_bar)
     lateinit var progressBar: ProgressBar
+    @BindView(R.id.text_app_fetching)
+    lateinit var textViewFetching: TextView
 
     @Inject
     lateinit var viewModelFactory: ViewModelFactory
@@ -45,10 +48,11 @@ class MainActivity : BaseActivity() {
 
         if (getCurrentContext().isConnectedToInternet()) {
             renderViewModel()
-        }
-        else {
-            AlertDialogHelper.noInternetConnection(getCurrentContext(),
-                    R.string.network_error, R.string.no_internet)
+        } else {
+            AlertDialogHelper.noInternetConnection(
+                getCurrentContext(),
+                R.string.network_error, R.string.no_internet
+            )
         }
     }
 
@@ -59,21 +63,30 @@ class MainActivity : BaseActivity() {
 
         mainViewModel.newsApiSuccess().observe(this, Observer<NewsFeedResponse> {
             if (it != null) {
+                hideTextView()
                 setUpNewsFeedFragment(it)
             }
         })
 
         mainViewModel.newsApiLoader().observe(this, Observer<Boolean> {
             if (it != null) {
+                hideTextView()
                 hideProgressBar()
             }
         })
 
         mainViewModel.newsApiError().observe(this, Observer<String> {
             if (it != null) {
+                hideTextView()
                 setUpErrorFragment()
             }
         })
+    }
+
+    private fun hideTextView() {
+        if (textViewFetching != null && textViewFetching.visibility != View.GONE) {
+            textViewFetching.visibility = View.GONE
+        }
     }
 
     private fun setUpNewsFeedFragment(newsFeedResponse: NewsFeedResponse?) {
@@ -112,8 +125,7 @@ class MainActivity : BaseActivity() {
 
         if (supportFragmentManager.backStackEntryCount < 1) {
             transaction.add(frameLayout, fragment).commit()
-        }
-        else {
+        } else {
             transaction.replace(frameLayout, fragment).commit()
         }
     }

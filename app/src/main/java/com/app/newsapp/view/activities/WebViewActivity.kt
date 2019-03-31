@@ -15,6 +15,8 @@ class WebViewActivity : BaseActivity() {
 
     @BindView(R.id.webview)
     lateinit var webView: WebView
+    @BindView(R.id.text_news_page)
+    lateinit var newsPageTextView: TextView
     @BindView(R.id.no_web_page)
     lateinit var noPageFoundTextView: TextView
     @BindView(R.id.progress_bar_webview)
@@ -23,7 +25,6 @@ class WebViewActivity : BaseActivity() {
     override fun layoutRes(): Int = R.layout.activity_web_view
 
     private var pageUrl: String? = null
-    private var pageTitle: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +42,7 @@ class WebViewActivity : BaseActivity() {
             noPageFoundTextView.visibility = View.GONE
             webView.visibility = View.VISIBLE
 
-            webView.webViewClient = AppWebViewClient(progressBar)
+            webView.webViewClient = AppWebViewClient(progressBar, newsPageTextView)
 
             val webSettings = webView.settings
             webSettings.javaScriptEnabled = true
