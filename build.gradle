@@ -23,6 +23,7 @@ buildscript {
     ext.timber_version = '4.7.1'
 
     ext.junit_version = '4.12'
+    ext.mockito_version = '2.11.0'
     ext.espresso_version = '3.2.0-alpha02'
 
     repositories {
