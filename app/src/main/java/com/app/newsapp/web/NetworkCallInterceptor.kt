@@ -1,7 +1,7 @@
 package com.app.newsapp.web
 
 import com.app.newsapp.BuildConfig
-import com.app.newsapp.NewsFeedApplication
+import com.app.newsapp.application.NewsFeedApplication
 import com.app.newsapp.utils.isConnectedToInternet
 import okhttp3.Interceptor
 import okhttp3.Response

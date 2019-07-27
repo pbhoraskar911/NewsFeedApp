@@ -14,14 +14,6 @@ Android App to fetch News Feed from India powered by <a href="https://newsapi.or
 * [Timber](https://github.com/JakeWharton/timber) for logging
 * [Mockito](http://mockito.org/) for unit testing
 
-### Screenshots
-------------------------------------
-<p align="left">
- <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed4.png" />
- <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed1.png" />
- <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed2.png" />
- <img height="380" src="https://github.com/pbhoraskar911/NewsFeedApp/blob/master/screenshots/NewsFeed3.png" />
- </p><br>
 
 ### Developed By
 ------------------------------------
