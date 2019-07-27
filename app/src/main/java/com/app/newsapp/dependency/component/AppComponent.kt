@@ -1,7 +1,7 @@
 package com.app.newsapp.dependency.component
 
 import android.app.Application
-import com.app.newsapp.NewsFeedApplication
+import com.app.newsapp.application.NewsFeedApplication
 import com.app.newsapp.dependency.module.*
 import dagger.Component
 import dagger.android.AndroidInjectionModule

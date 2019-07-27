@@ -1,7 +1,7 @@
 package com.app.newsapp.web
 
 import com.app.newsapp.BuildConfig
-import com.app.newsapp.NewsFeedApplication
+import com.app.newsapp.application.NewsFeedApplication
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor

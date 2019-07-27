@@ -1,8 +1,9 @@
-package com.app.newsapp
+package com.app.newsapp.application
 
 import android.app.Activity
 import android.app.Application
 import androidx.fragment.app.Fragment
+import com.app.newsapp.BuildConfig
 import com.app.newsapp.dependency.component.AppComponent
 import com.app.newsapp.dependency.component.DaggerAppComponent
 import com.app.newsapp.dependency.module.AppModule
